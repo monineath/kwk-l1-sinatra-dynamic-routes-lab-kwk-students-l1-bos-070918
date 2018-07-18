@@ -20,20 +20,18 @@ end
 get '/say/:number/:phrase' do
   @number = params[:number].to_i
   @phrase = params[:phrase]
-   
-  until @number == 0 
-   @phrase 
-   @number -= 1 
+   @everthing = []
+   x = 0 
+  until x == @number
+   @everthing << @phrase
+   x += 1 
   end 
-  
-  # @all_phrases = ""
-  # for i in 1..@number
-  # @all_phrases += "#{@phrase}\n" 
-  # end
-  # @all_phrases
+   "#{@everything}"
 end
 
 get '/say/:word1/:word2/:word3/:word4/:word5' do
-  "#{params[:word1]"
+  "#{params[:word1]} #{params[:word2]} #{params[:word3]} #{params[:word4]} #{params[:word5]}."
+end 
+
 
 end
