@@ -20,13 +20,19 @@ end
 get '/say/:number/:phrase' do
   @number = params[:number].to_i
   @phrase = params[:phrase]
+   
+  until @number == 0 
+   @phrase 
+   @number -= 1 
+  end 
   
-  @all_phrases = ""
-  for i in 1..@number
-  @all_phrases += "#{@phrase}\n" 
-  end
-  @all_phrases
+  # @all_phrases = ""
+  # for i in 1..@number
+  # @all_phrases += "#{@phrase}\n" 
+  # end
+  # @all_phrases
 end
 
+ get 
 
 end
